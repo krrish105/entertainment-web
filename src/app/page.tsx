@@ -1,5 +1,5 @@
 import Card from "@/components/common/Card";
-import TrendingCard from "@/components/common/trendingCard";
+import TrendingCard from "@/components/common/TrendingCard";
 import DashboardLayout from "@/components/layout/DashboardLayout";
 
 export default function Home() {

@@ -3,25 +3,149 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--red: #fc4747;
+	--dark-blue: #10141e;
+	--greyish-blue: #5a698f;
+	--semi-dark-blue: #161d2f;
+	--pure-white: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+input {
+	background-color: transparent;
+	outline: none;
+}
+
+img.not_h_auto {
+	height: fit-content;
+}
+
+html,
+body,
+main {
+	height: 100%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	background: var(--dark-blue);
+	color: var(--pure-white);
+	font-family: Outfit;
+	font-weight: 300;
+	line-height: normal;
+}
+
+/* ========== Design System ========== */
+/* ---- Typography ---- */
+.heading_l {
+	font-size: 32px;
+	letter-spacing: -0.5px;
+}
+.heading_m {
+	font-size: 24px;
+}
+.heading_s {
+	font-size: 24px;
+	font-weight: 500;
+}
+.heading_xs {
+	font-size: 18px;
+	font-weight: 500;
+}
+.body_m {
+	font-size: 15px;
+}
+.body_s {
+	font-size: 13px;
+}
+
+/* ---- Interactive Elements ---- */
+.search {
+	width: 100%;
+}
+.search input[type="search"] {
+	width: 100%;
+	padding-bottom: 14px;
+	font-size: 24px;
+}
+.search::placeholder {
+	opacity: 0.4979;
+}
+.search input:active,
+.search input:focus {
+	border-bottom: 1px solid var(--greyish-blue);
+	caret-color: var(--red);
+}
+.input {
+	font-size: 15px;
+	padding-inline: 18px;
+	padding-bottom: 18px;
+	border-bottom: 1px solid var(--greyish-blue);
+}
+.input:active,
+.input:focus {
+	border-bottom: 1px solid var(--pure-white);
+	caret-color: var(--red);
+}
+.input.error {
+	border-bottom: 1px solid var(--red);
+}
+.input.error + .error_msg {
+	color: var(--red);
+	font-size: 13px;
+	padding-bottom: 18px;
+	border-bottom: 1px solid var(--red);
+}
+.button {
+	border-radius: 6px;
+	background-color: var(--red);
+	transition: background-color 0.2s ease-in-out;
+	font-size: 15px;
+	padding: 14px;
+}
+.button:hover {
+	background-color: var(--pure-white);
+	color: var(--semi-dark-blue);
+}
+.bookmark-icon {
+	width: 32px;
+	height: 32px;
+	content: url("../../public/vectors/bookmark-idle.svg");
+}
+.bookmark-icon:hover {
+	content: url("../../public/vectors/bookmark-hover.svg");
+}
+.bookmark-icon:active {
+	content: url("../../public/vectors/bookmark-active.svg");
+}
+
+.center_content {
+	@apply flex flex-col items-center justify-center;
+}
+
+.left_menu .active_link img {
+	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(266deg)
+		brightness(110%) contrast(101%);
+}
+
+.overlay {
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.75) 100%
+	);
+}
+
+.card_tags {
+	@apply flex gap-2 items-center mb-2;
+}
+.card_tags li {
+	@apply flex items-center gap-1;
+}
+.card_tags li:not(:first-child)::before {
+	content: "";
+	background-color: var(--pure-white);
+	opacity: 0.5;
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	margin-right: 0.5rem;
 }

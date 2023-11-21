@@ -1,10 +1,21 @@
+import BookmarkIcon from "@/components/common/BookmarkIcon";
 import Image from "next/image";
 
-const TrendingCard = () => {
+type TrendingCardProps = {
+	title: string;
+	thumbnail: any;
+	year: number;
+	category: string;
+	rating: string;
+	isBookmarked: boolean;
+	isTrending: boolean;
+};
+
+const TrendingCard = ({ ...props }: TrendingCardProps) => {
 	return (
 		<div className='trending_card rounded-lg relative flex items-end h-[230px] max-w-md'>
 			<Image
-				src='/assets/thumbnails/beyond-earth/trending/large.jpg'
+				src={props.thumbnail.trending.large}
 				alt=''
 				width={470}
 				height={230}
@@ -13,7 +24,7 @@ const TrendingCard = () => {
 			<div className='overlay absolute inset-0 -z-10'></div>
 			<div className='mb-6 ml-6 text-brandWhite'>
 				<ul className='card_tags'>
-					<li>2019</li>
+					<li>{props.year}</li>
 					<li>
 						<Image
 							src='/vectors/icon-category-movie.svg'
@@ -22,12 +33,13 @@ const TrendingCard = () => {
 							height={12}
 							className='not_h_auto'
 						/>
-						Movie
+						{props.category}
 					</li>
-					<li>PG</li>
+					<li>{props.rating}</li>
 				</ul>
-				<span className='heading_m font-medium'>Beyond Earth</span>
+				<span className='heading_m font-medium'>{props.title}</span>
 			</div>
+			<BookmarkIcon title={props.title} isBookmarked={props.isBookmarked} />
 		</div>
 	);
 };

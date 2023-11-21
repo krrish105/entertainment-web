@@ -4,10 +4,10 @@ import Link from "next/link";
 
 const LeftMenu = () => {
 	return (
-		<div className='left_menu p-8 w-fit h-full'>
+		<div className='left_menu pb-8 w-fit h-full'>
 			<div className='p-8 flex flex-col items-center bg-brandSemiDarkBlue rounded-3xl h-full'>
 				<Logo />
-				<ul className='mt-28 flex flex-col gap-10'>
+				<ul className='mt-28 flex flex-col gap-10 left_menu_link_list'>
 					<li>
 						<Link href='/' title='Home' className='active_link'>
 							<Image

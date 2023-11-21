@@ -65,6 +65,7 @@ body {
 	width: 100%;
 	padding-bottom: 14px;
 	font-size: 24px;
+	border-bottom: 1px solid transparent;
 }
 .search::placeholder {
 	opacity: 0.4979;
@@ -105,23 +106,35 @@ body {
 	background-color: var(--pure-white);
 	color: var(--semi-dark-blue);
 }
-.bookmark-icon {
-	width: 32px;
-	height: 32px;
-	content: url("../../public/vectors/bookmark-idle.svg");
+.bookmark_icon {
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
 }
-.bookmark-icon:hover {
-	content: url("../../public/vectors/bookmark-hover.svg");
+.bookmark_icon:hover svg circle {
+	opacity: 1;
+	fill: white;
 }
-.bookmark-icon:active {
-	content: url("../../public/vectors/bookmark-active.svg");
+.bookmark_icon:hover svg path {
+	stroke: black;
+}
+.bookmark_icon.active {
+	opacity: 1;
+}
+.bookmark_icon.active svg path {
+	fill: white;
 }
 
 .center_content {
 	@apply flex flex-col items-center justify-center;
 }
 
-.left_menu .active_link img {
+.left_menu_link_list a {
+	width: 20px;
+	height: 20px;
+}
+
+.left_menu_link_list .active_link img,
+.left_menu_link_list a:hover img {
 	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(266deg)
 		brightness(110%) contrast(101%);
 }
@@ -148,4 +161,22 @@ body {
 	height: 4px;
 	border-radius: 50%;
 	margin-right: 0.5rem;
+}
+
+.vertical_scroll {
+	display: flex;
+	gap: 2.5rem;
+	align-items: center;
+	overflow: scroll;
+}
+.vertical_scroll > div {
+	min-width: 430px;
+}
+
+.dashboard_grid {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 2rem;
+	padding: 2rem;
+	padding-bottom: 0;
 }

@@ -3,10 +3,8 @@ import MoviesSection from "@/components/sections/Movies";
 
 export default function Movies() {
 	return (
-		<main>
-			<DashboardLayout>
-				<MoviesSection />
-			</DashboardLayout>
-		</main>
+		<DashboardLayout>
+			<MoviesSection />
+		</DashboardLayout>
 	);
 }

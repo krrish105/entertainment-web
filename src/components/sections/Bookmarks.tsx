@@ -8,7 +8,7 @@ const BookmarksSection = () => {
 		(state: RootState) => state.entertainmentSlice.list
 	);
 
-	const Shows = () => {
+	const Bookmarks = () => {
 		return EntertainmentList.filter(
 			(entertainmentCard) => entertainmentCard.isBookmarked
 		).map((entertainmentCard, index) => {
@@ -19,7 +19,9 @@ const BookmarksSection = () => {
 	return (
 		<section>
 			<h2 className='heading_l my-6'>Bookmarks</h2>
-			<div className='flex flex-wrap gap-10'>{Shows()}</div>
+			<div className='flex flex-wrap gap-10'>
+				<Bookmarks />
+			</div>
 		</section>
 	);
 };

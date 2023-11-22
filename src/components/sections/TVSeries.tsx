@@ -19,7 +19,9 @@ const TVSeriesSection = () => {
 	return (
 		<section>
 			<h2 className='heading_l my-6'>TV Series</h2>
-			<div className='flex flex-wrap gap-10'>{Shows()}</div>
+			<div className='flex flex-wrap gap-10'>
+				<Shows />
+			</div>
 		</section>
 	);
 };

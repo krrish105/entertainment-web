@@ -19,7 +19,9 @@ const Trending = () => {
 	return (
 		<section>
 			<h2 className='heading_l my-6'>Trending</h2>
-			<div className='vertical_scroll'>{Trendings()}</div>
+			<div className='vertical_scroll'>
+				<Trendings />
+			</div>
 		</section>
 	);
 };

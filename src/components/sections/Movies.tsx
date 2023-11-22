@@ -19,7 +19,9 @@ const MoviesSection = () => {
 	return (
 		<section>
 			<h2 className='heading_l my-6'>Movies</h2>
-			<div className='flex flex-wrap gap-10'>{Movies()}</div>
+			<div className='flex flex-wrap gap-10'>
+				<Movies />
+			</div>
 		</section>
 	);
 };

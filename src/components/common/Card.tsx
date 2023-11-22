@@ -1,17 +1,8 @@
 import BookmarkIcon from "@/components/common/BookmarkIcon";
 import Image from "next/image";
+import EntertainmentCardProps from "@/redux/EntertainmentCardProp";
 
-type CardProps = {
-	title: string;
-	thumbnail: any;
-	year: number;
-	category: string;
-	rating: string;
-	isBookmarked: boolean;
-	isTrending: boolean;
-};
-
-const Card = ({ ...props }: CardProps) => {
+const Card = ({ ...props }: EntertainmentCardProps) => {
 	return (
 		<div className='rounded-lg flex flex-col w-fit'>
 			<div className='relative'>

@@ -4,11 +4,9 @@ import Trending from "@/components/sections/Trending";
 
 export default async function Home() {
 	return (
-		<main>
-			<DashboardLayout>
-				<Trending />
-				<Recommendations />
-			</DashboardLayout>
-		</main>
+		<DashboardLayout>
+			<Trending />
+			<Recommendations />
+		</DashboardLayout>
 	);
 }

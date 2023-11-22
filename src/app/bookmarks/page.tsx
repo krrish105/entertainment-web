@@ -3,10 +3,8 @@ import BookmarksSection from "@/components/sections/Bookmarks";
 
 export default function Bookmarked() {
 	return (
-		<main>
-			<DashboardLayout>
-				<BookmarksSection />
-			</DashboardLayout>
-		</main>
+		<DashboardLayout>
+			<BookmarksSection />
+		</DashboardLayout>
 	);
 }

@@ -36,7 +36,7 @@ const BookmarksSection = () => {
 	useEffect(() => {
 		bookmarkMoviesHandler();
 		bookmarkTVSeriesHandler();
-	}, []);
+	}, [EntertainmentList]);
 
 	return (
 		<>

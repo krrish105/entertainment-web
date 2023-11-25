@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import entertainmentData from "../../../public/data.json";
-import { Reducer } from "react";
 
 type Entertainment = {
 	title: string;

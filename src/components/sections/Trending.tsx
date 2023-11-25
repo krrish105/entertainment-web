@@ -1,6 +1,7 @@
 "use client";
 import TrendingCard from "@/components/common/TrendingCard";
 import { RootState } from "@/redux/store";
+import STRINGS from "@/utils/string";
 import { useSelector } from "react-redux";
 
 const Trending = () => {
@@ -18,7 +19,7 @@ const Trending = () => {
 
 	return (
 		<section>
-			<h2 className='heading_l my-6'>Trending</h2>
+			<h2 className='heading_l my-6'>{STRINGS.component.trending.heading}</h2>
 			<div className='vertical_scroll'>
 				<Trendings />
 			</div>

@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-const SearchBar = ({ blurEvent, searchTerm }: any) => {
+const SearchBar = ({ blurEvent, searchTerm, placeholder }: any) => {
 	return (
-		<div className='flex gap-6 search w-full'>
+		<div className='flex gap-4 search w-full lg:gap-6'>
 			<Image
 				src='/vectors/icon-search.svg'
 				alt='Search'
@@ -14,7 +14,7 @@ const SearchBar = ({ blurEvent, searchTerm }: any) => {
 				type='search'
 				name=''
 				id=''
-				placeholder='Search for movies or TV series'
+				placeholder={placeholder}
 				className='w-full'
 				onChange={(e) => blurEvent(e.target.value)}
 				value={searchTerm}

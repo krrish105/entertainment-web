@@ -63,8 +63,7 @@ body {
 }
 .search input[type="search"] {
 	width: 100%;
-	padding-bottom: 14px;
-	font-size: 24px;
+	font-size: 16px;
 	border-bottom: 1px solid transparent;
 }
 .search::placeholder {
@@ -175,8 +174,18 @@ body {
 
 .dashboard_grid {
 	display: grid;
-	grid-template-columns: 98px auto;
-	gap: 2rem;
-	padding: 2rem;
-	padding-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+	.dashboard_grid {
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: 98px auto;
+		padding: 2rem;
+		padding-bottom: 0;
+	}
+	.search input[type="search"] {
+		padding-bottom: 14px;
+		font-size: 24px;
+	}
 }

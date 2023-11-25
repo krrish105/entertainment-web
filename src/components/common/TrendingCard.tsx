@@ -18,7 +18,11 @@ const TrendingCard = ({ ...props }: EntertainmentCardProps) => {
 					<li>{props.year}</li>
 					<li>
 						<Image
-							src='/vectors/icon-category-movie.svg'
+							src={
+								props.category === "Movie"
+									? "/vectors/icon-category-movie.svg"
+									: "/vectors/icon-category-tv.svg"
+							}
 							alt=''
 							width={12}
 							height={12}

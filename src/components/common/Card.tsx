@@ -9,7 +9,7 @@ const Card = ({ ...props }: EntertainmentCardProps) => {
 				<Image
 					src={props.thumbnail.regular.large}
 					alt=''
-					width={360}
+					width={300}
 					height={300}
 					className='rounded-lg'
 				/>
@@ -22,7 +22,11 @@ const Card = ({ ...props }: EntertainmentCardProps) => {
 					<li>{props.year}</li>
 					<li>
 						<Image
-							src='/vectors/icon-category-movie.svg'
+							src={
+								props.category === "Movie"
+									? "/vectors/icon-category-movie.svg"
+									: "/vectors/icon-category-tv.svg"
+							}
 							alt=''
 							width={12}
 							height={12}

@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import ReduxProvider from "@/redux/Provider";
 import "./globals.css";
+import STRINGS from "@/utils/string";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Entertainment Web App",
+	title: `${STRINGS.metadata.home.title}`,
 	description: "",
 };
 

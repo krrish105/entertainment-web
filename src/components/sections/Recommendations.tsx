@@ -2,6 +2,7 @@
 import { RootState } from "@/redux/store";
 import { useSelector } from "react-redux";
 import Card from "@/components/common/Card";
+import STRINGS from "@/utils/string";
 
 const Recommendations = () => {
 	const EntertainmentList = useSelector(
@@ -16,7 +17,9 @@ const Recommendations = () => {
 
 	return (
 		<section>
-			<h2 className='heading_l my-6'>Recommended For You</h2>
+			<h2 className='heading_l my-6'>
+				{STRINGS.component.recommendations.heading}
+			</h2>
 			<div className='flex flex-wrap gap-10'>
 				<RecommendationCards />
 			</div>

@@ -23,8 +23,6 @@ Users should be able to:
 - Navigate between Home, Movies, TV Series, and Bookmarked Shows pages
 - Add/Remove bookmarks from all movies and TV series
 - Search for relevant shows on all pages
-- **Bonus**: Build this project as a full-stack application
-- **Bonus**: If you're building a full-stack app, we provide authentication screen (sign-up/login) designs if you'd like to create an auth flow
 
 ### Screenshot
 
@@ -32,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/krrish105/entertainment-web](https://github.com/krrish105/entertainment-web)
+- Live Site URL: [https://entertainment-web-three.vercel.app/](https://entertainment-web-three.vercel.app/)
 
 ## My process
 
@@ -46,9 +44,13 @@ Users should be able to:
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Portfolio: [Karishma](https://www.karishma.dev/)
+- Frontend Mentor - [Krrish105](https://www.frontendmentor.io/profile/Krrish105)
+- Twitter - [\_karishma10](https://twitter.com/_karishma10)
+- LinkedIn - [Karishma Garg](https://www.linkedin.com/in/karishma-garg-)
+- CodePen - [Krrish105](https://codepen.io/krrish105)

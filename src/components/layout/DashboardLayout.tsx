@@ -32,13 +32,19 @@ const DashboardLayout = ({ children }: any) => {
 				if (pathname === "movies") {
 					isCardValid =
 						entertainmentCard.category === "Movie" &&
-						entertainmentCard.title.includes(searchTerm);
+						entertainmentCard.title
+							.toLowerCase()
+							.includes(searchTerm.toLowerCase());
 				} else if (pathname === "tvSeries") {
 					isCardValid =
 						entertainmentCard.category === "TV Series" &&
-						entertainmentCard.title.includes(searchTerm);
+						entertainmentCard.title
+							.toLowerCase()
+							.includes(searchTerm.toLowerCase());
 				} else {
-					isCardValid = entertainmentCard.title.includes(searchTerm);
+					isCardValid = entertainmentCard.title
+						.toLowerCase()
+						.includes(searchTerm.toLowerCase());
 				}
 				return isCardValid;
 			});

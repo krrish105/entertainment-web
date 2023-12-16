@@ -22,30 +22,6 @@ export const entertainment = createSlice({
 	name: "entertainment",
 	initialState,
 	reducers: {
-		// getStateAccordingToPayloadCategory: (state, action) => {
-		// 	state.list.map(
-		// 		(entertainment) => entertainment.category === action.payload
-		// 	);
-		// },
-		// getMovies: (state, action) => {
-		// 	state.list.map(
-		// 		(entertainment) => entertainment.category === action.payload
-		// 	);
-		// },
-		// getTVShows: (state, action) => {
-		// 	state.list.map(
-		// 		(entertainment) => entertainment.category === action.payload
-		// 	);
-		// },
-		// getRecommended: (state, action) => {
-		// 	state.list;
-		// },
-		// getTrending: (state, action) => {
-		// 	state.list.map((entertainment) => entertainment.isTrending);
-		// },
-		// getBookmarked: (state, action) => {
-		// 	state.list.map((entertainment) => entertainment.isBookmarked);
-		// },
 		setBookmark: (state, action) => {
 			const entertainment = state.list.find(
 				(entertainment) => entertainment.title === action.payload
@@ -57,11 +33,5 @@ export const entertainment = createSlice({
 	},
 });
 
-export const {
-	// getStateAccordingToPayloadCategory,
-	// getRecommended,
-	// getTrending,
-	// getBookmarked,
-	setBookmark,
-} = entertainment.actions;
+export const { setBookmark } = entertainment.actions;
 export default entertainment.reducer;
